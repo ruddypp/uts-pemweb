@@ -36,12 +36,12 @@
                             <span class="mx-2 text-sm font-medium">Karyawan</span>
                         </a>
         
-                        <a class="flex items-center px-3 py-2 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700" href="#">
+                        <a class="flex items-center px-3 py-2 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700" href="../jabatan-page/index.html">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6" />
                             </svg>
         
-                            <span class="mx-2 text-sm font-medium">Preformance</span>
+                            <span class="mx-2 text-sm font-medium">Jabatan</span>
                         </a>
     
                         <a class="flex items-center px-3 py-2 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700" href="#">
@@ -129,124 +129,138 @@
             </div>
         </aside>
 
-        <section class="bg-gray-100">
-            <div class="min-h-screen p-6">
+        <section class="bg-gray-100 h-screen w-screen overflow-hidden">
+            <div class="h-full flex flex-col p-6">
                 <!-- Breadcrumb -->
-                <div class="flex items-center space-x-2 text-gray-500 mb-6">
-                    <span><a href="../index.html">Dashboard</a></span>
+                <div class="flex items-center space-x-2 text-gray-500 mb-4">
+                    <span><a href="../index.html" class="hover:text-blue-600">Dashboard</a></span>
                     <span>›</span>
-                    <span><a href="../karyawan-page/index.html">Karyawan</a></span>
+                    <span><a href="../karyawan-page/index.html" class="hover:text-blue-600">Karyawan</a></span>
                     <span>›</span>
                     <span class="text-gray-900">Tambah Data Karyawan</span>
                 </div>
         
                 <!-- Form Card -->
-                <div class="bg-white rounded-lg shadow-lg p-6 max-w-4xl mx-auto">
-                    <h2 class="text-xl font-semibold mb-6">Tambah Data Karyawan</h2>
+                <div class="flex-1 bg-white rounded-lg shadow-lg flex flex-col overflow-hidden">
+                    <div class="p-6 border-b">
+                        <h2 class="text-xl font-semibold">Tambah Data Karyawan</h2>
+                    </div>
         
-                    <form class="space-y-6">
-                        <!-- Nama Lengkap -->
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">
-                                Nama Lengkap
-                            </label>
-                            <input type="text" 
-                                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
-                                placeholder="Masukkan nama lengkap">
-                        </div>
+                    <div class="flex-1 p-6 overflow-y-auto">
+                        <form class="max-w-4xl mx-auto space-y-6">
+                            <!-- Two Column Layout -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <!-- Left Column -->
+                                <div class="space-y-6">
+                                    <!-- Nama Lengkap -->
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-1">
+                                            Nama Lengkap
+                                        </label>
+                                        <input type="text" 
+                                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                                            placeholder="Masukkan nama lengkap">
+                                    </div>
         
-                        <!-- Jenis Kelamin -->
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">
-                                Jenis Kelamin
-                            </label>
-                            <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500">
-                                <option value="" selected disabled>Pilih jenis kelamin</option>
-                                <option value="L">Laki-laki</option>
-                                <option value="P">Perempuan</option>
-                            </select>
-                        </div>
+                                    <!-- Jenis Kelamin -->
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-1">
+                                            Jenis Kelamin
+                                        </label>
+                                        <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500">
+                                            <option value="" selected disabled>Pilih jenis kelamin</option>
+                                            <option value="L">Laki-laki</option>
+                                            <option value="P">Perempuan</option>
+                                        </select>
+                                    </div>
         
-                        <!-- Email -->
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">
-                                Email
-                            </label>
-                            <input type="email" 
-                                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
-                                placeholder="Masukkan email">
-                        </div>
+                                    <!-- Email -->
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-1">
+                                            Email
+                                        </label>
+                                        <input type="email" 
+                                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                                            placeholder="Masukkan email">
+                                    </div>
         
-                        <!-- No HP -->
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">
-                                No HP
-                            </label>
-                            <input type="tel" 
-                                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
-                                placeholder="Masukkan nomor HP">
-                        </div>
+                                    <!-- No HP -->
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-1">
+                                            No HP
+                                        </label>
+                                        <input type="tel" 
+                                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                                            placeholder="Masukkan nomor HP">
+                                    </div>
+                                </div>
         
-                        <!-- Alamat -->
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">
-                                Alamat
-                            </label>
-                            <textarea 
-                                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
-                                rows="4"
-                                placeholder="Masukkan alamat lengkap"></textarea>
-                        </div>
+                                <!-- Right Column -->
+                                <div class="space-y-6">
+                                    <!-- Password -->
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-1">
+                                            Password
+                                        </label>
+                                        <input type="password" 
+                                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                                            placeholder="Masukkan password">
+                                    </div>
         
-                        <!-- Password -->
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">
-                                Password
-                            </label>
-                            <input type="password" 
-                                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
-                                placeholder="Masukkan password">
-                        </div>
+                                    <!-- Jabatan -->
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-1">
+                                            Jabatan
+                                        </label>
+                                        <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500">
+                                            <option value="" selected disabled>Pilih jabatan</option>
+                                            <option value="staff">Staff</option>
+                                            <option value="supervisor">Supervisor</option>
+                                            <option value="manager">Manager</option>
+                                        </select>
+                                    </div>
         
-                        <!-- Jabatan -->
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">
-                                Jabatan
-                            </label>
-                            <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500">
-                                <option value="" selected disabled>Pilih jabatan</option>
-                                <option value="staff">Staff</option>
-                                <option value="supervisor">Supervisor</option>
-                                <option value="manager">Manager</option>
-                            </select>
-                        </div>
+                                    <!-- Status -->
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-1">
+                                            Status
+                                        </label>
+                                        <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500">
+                                            <option value="" selected disabled>Pilih status</option>
+                                            <option value="aktif">Aktif</option>
+                                            <option value="nonaktif">Non-aktif</option>
+                                        </select>
+                                    </div>
         
-                        <!-- Status -->
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">
-                                Status
-                            </label>
-                            <select class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500">
-                                <option value="" selected disabled>Pilih status</option>
-                                <option value="aktif">Aktif</option>
-                                <option value="nonaktif">Non-aktif</option>
-                            </select>
-                        </div>
+                                    <!-- Alamat -->
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-1">
+                                            Alamat
+                                        </label>
+                                        <textarea 
+                                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                                            rows="4"
+                                            placeholder="Masukkan alamat lengkap"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
         
-                        <!-- Buttons -->
-                        <div class="flex space-x-2">
-                            <button type="submit" class="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
+                    <!-- Buttons in Fixed Footer -->
+                    <div class="border-t p-6 bg-gray-50">
+                        <div class="max-w-4xl mx-auto flex justify-end space-x-2">
+                            <button type="submit" class="px-6 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
                                 Simpan
                             </button>
-                            <button type="button" class="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">
+                            <button type="button" class="px-6 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">
                                 Cancel
                             </button>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </section>
-
     </div> 
 </body>
 </html>
